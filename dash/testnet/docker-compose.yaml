@@ -1,0 +1,10 @@
+insight-dash-testnet:
+    build: .
+    dockerfile: Dockerfile
+    container_name: insight-dash-testnet
+    ports:
+      - "4003:3001"   # API endpoint
+      #- "28331:28331" # ZMQ port
+    volumes:
+      - ./data_dash_testnet:/dashcore
+    restart: always

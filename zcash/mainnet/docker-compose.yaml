@@ -1,0 +1,11 @@
+insight-zec-mainnet:
+    build: .
+    dockerfile: Dockerfile
+    #image: insight_ltc_mainnet
+    container_name: insight-zec-mainnet
+    ports:
+      - "5004:3001"   # API endpoint
+      #- "28331:28331" # ZMQ port
+    volumes:
+      - ./data_zec_mainnet:/mynode/data
+    restart: always

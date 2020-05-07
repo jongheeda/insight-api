@@ -1,0 +1,18 @@
+{
+    "network": "testnet",
+    "port": 3001,
+    "services": [
+      "@dashevo/insight-api",
+      "@dashevo/insight-ui",
+      "dashd",
+      "web"
+    ],
+    "servicesConfig": {
+      "dashd": {
+        "spawn": {
+          "datadir": "../.dashcore",
+          "exec": "../dashcore-0.15.0/bin/dashd"
+        }
+      }
+    }
+  }

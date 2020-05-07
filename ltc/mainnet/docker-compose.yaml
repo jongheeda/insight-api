@@ -1,0 +1,11 @@
+insight-ltc-mainnet:
+    build: .
+    dockerfile: Dockerfile
+    #image: insight_ltc_mainnet
+    container_name: insight-ltc-mainnet
+    ports:
+      - "5002:3001"   # API endpoint
+      #- "28331:28331" # ZMQ port
+    volumes:
+      - ./data_ltc_mainnet:/mynode/data
+    restart: always

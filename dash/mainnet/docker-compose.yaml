@@ -1,0 +1,11 @@
+insight-dash-mainnet:
+    build: .
+    dockerfile: Dockerfile
+    #image: insight_dash_mainnet
+    container_name: insight-dash-mainnet
+    ports:
+      - "5003:3001"   # API endpoint
+      #- "28331:28331" # ZMQ port
+    volumes:
+      - ./data_dash_mainnet:/dashcore
+    restart: always

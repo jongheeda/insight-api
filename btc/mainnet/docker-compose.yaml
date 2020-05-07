@@ -1,0 +1,11 @@
+insight-btc-mainnet:
+    build: .
+    dockerfile: Dockerfile
+    #image: insight_ltc_mainnet
+    container_name: insight-btc-mainnet
+    ports:
+      - "5001:3001"   # API endpoint
+      #- "28331:28331" # ZMQ port
+    volumes:
+      - ./data_btc_mainnet:/mynode/data
+    restart: always

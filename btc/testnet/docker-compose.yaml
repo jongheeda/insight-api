@@ -1,0 +1,10 @@
+insight-btc-testnet:
+    build: .
+    dockerfile: Dockerfile
+    container_name: insight-btc-testnet
+    ports:
+      - "4001:3001"   # API endpoint
+      #- "28331:28331" # ZMQ port
+    volumes:
+      - ./data_btc_testnet:/mynode/data
+    restart: always

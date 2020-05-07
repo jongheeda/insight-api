@@ -1,8 +1,7 @@
-insight-ltc-mainnet:
+insight-ltc-testnet:
     build: .
     dockerfile: Dockerfile
-    #image: insight_ltc_mainnet
-    container_name: insight-ltc-mainnet
+    container_name: insight-ltc-testnet
     ports:
       - "4002:3001"   # API endpoint
       #- "28331:28331" # ZMQ port
